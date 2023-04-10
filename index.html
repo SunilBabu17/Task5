@@ -1,31 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Konark Tourist Map</title>
-	<!-- Include custom CSS -->
-	<link rel="stylesheet" href="style.css"/>
-	<!-- Set map container dimensions -->
+	<title>Konark Tourist Spots</title>
 	<style>
-		#map { height: 600px; }
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		.map {
+			background-image: url('konark-map.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 1000px;
+			height: 800px;
+			margin: auto;
+			position: relative;
+		}
+
+		.hotspot {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #ff3333;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.hotspot:hover {
+			transform: scale(1.2);
+			background-color: #ff6666;
+		}
+
+		.description {
+			position: absolute;
+			background-color: white;
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
+
+		.hotspot:hover .description {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.description h2 {
+			font-size: 16px;
+			margin: 0;
+		}
+
+		.description p {
+			font-size: 14px;
+			margin: 0;
+			color: #666666;
+		}
 	</style>
 </head>
 <body>
-	<h1>Konark Tourist Map</h1>
-	<div id="map">
-		<img src="konark_map.jpg" usemap="#konark_map">
-		<map name="konark_map">
-			<!-- Define hotspots with their coordinates and descriptions -->
-			<area shape="circle" coords="510,165,15" href="#" alt="Konark Sun Temple" title="The Konark Sun Temple is a 13th-century temple dedicated to the Hindu god Surya. It is a UNESCO World Heritage Site.">
-			<area shape="circle" coords="555,320,15" href="#" alt="Ramachandi Temple" title="The Ramachandi Temple is a temple dedicated to the Hindu goddess Ramachandi. It is located on the banks of the Kusabhadra River.">
-			<area shape="circle" coords="500,230,15" href="#" alt="Chandrabhaga Beach" title="The Chandrabhaga Beach is a scenic beach located close to the Konark Sun Temple.">
-			<area shape="circle" coords="380,195,15" href="#" alt="Konark Beach" title="The Konark Beach is a popular beach located near the Konark Sun Temple.">
-			<area shape="circle" coords="310,240,15" href="#" alt="Archaeological Museum" title="The Konark Archaeological Museum houses a collection of sculptures and artifacts from the Konark Sun Temple and other nearby temples.">
-			<area shape="circle" coords="180,370,15" href="#" alt="Kuruma Village" title="Kuruma Village is a traditional Indian village that offers a glimpse into rural life in Odisha.">
-			<area shape="circle" coords="275,395,15" href="#" alt="Puri Beach" title="Puri Beach is a popular beach destination located about 35 km from Konark.">
-			<area shape="circle" coords="350,440,15" href="#" alt="Jagannath Temple" title="The Jagannath Temple is a famous temple dedicated to the Hindu god Jagannath. It is located in the nearby city of Puri.">
-			<area shape="circle" coords="485,430,15" href="#" alt="Udayagiri and Khandagiri Caves" title="The Udayagiri and Khandagiri Caves are ancient rock-cut caves located about 50 km from Konark.">
-			<area shape="circle" coords="440,490,15" href="#" alt="Chilika Lake" title="Chilika Lake is a brackish water lagoon located about 70 km from Konark. It is the largest coastal lagoon in India.">
-		</map>
+	<div class="map">
+		<div class="hotspot" style="top: 200px; left: 400px;">
+			<div class="description">
+				<h2><a href="#">Sun Temple</a></h2>
+				<p>A 13th-century temple dedicated to the Hindu Sun God, known for its exquisite architecture and intricate carvings.</p>
+			</div>
+		</div>
+		<div class="hotspot" style="top: 350px; left: 250px;">
+			<div class="description">
+				<h2><a href="#">Chandrabhaga Beach</a></h2>
+				<p>A beautiful and secluded beach, known for its clean waters and pristine surroundings.</p>
+			</div>
+		</div>
+		<div class="hotspot" style="top: 500px; left: 600px;">
+			<div class="description">
+				<h2><a href="#">Ramachandi Temple</a></h2>
+				<p>A beautiful temple dedicated to the goddess Ramachandi, situated on a picturesque location on the banks of the river Kushabhadra.</p>
+			</div>
+		</div>
+		<div class="hotspot" .hotspot" style="top: 550px; left: 350px;">
+		<div class="description">
+			<h2><a href="#">Konark Museum</a></h2>
+			<p>A museum dedicated to the history and culture of Konark, showcasing a wide range of artifacts and exhibits.</p>
+		</div>
 	</div>
-</body>
-</html>
+	<div class="hotspot" style="top: 250px; left: 600px;">
+		<div class="description">
+			<h2><a href="#">Konark Beach</a></h2>
+			<p>A pristine and secluded beach, perfect for a quiet retreat or a romantic getaway.</p>
+		</div>
+	</div>
+	<div class="hotspot" style="top: 150px; left: 250px;">
+		<div class="description">
+			<h2><a href="#">Archaeological Survey of India Museum</a></h2>
+			<p>A museum dedicated to the archaeological finds from the Konark Sun Temple and the surrounding areas.</p>
+		</div>
+	</div>
+	<div class="hotspot" style="top: 400px; left: 750px;">
+		<div class="description">
+			<h2><a href="#">Konark Natya Mandap</a></h2>
+			<p>A cultural center dedicated to classical Indian dance, located near the Konark Sun Temple.</p>
+		</div>
+	</div>
+	<div class="hotspot" style="top: 600px; left: 450px;">
+		<div class="description">
+			<h2><a href="#">Puri Beach</a></h2>
+			<p>A popular beach destination near Konark, known for its lively atmosphere and water sports activities.</p>
+		</div>
+	</div>
+	<div class="hotspot" style="top: 350px; left: 750px;">
+		<div class="description">
+			<h2><a href="#">Jagannath Temple</a></h2>
+			<p>A famous temple dedicated to Lord Jagannath, located in the nearby town of Puri.</p>
+		</div>
+	</div>
+	<div class="hotspot" style="top: 100px; left: 500px;">
+		<div class="description">
+			<h2><a href="#">ASI Museum, Puri</a></h2>
+			<p>A museum dedicated to the artifacts and history of the Jagannath Temple and its surrounding areas.</p>
+		</div>
+	</div>
+</div>
